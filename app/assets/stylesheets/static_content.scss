@@ -1,0 +1,71 @@
+// Place all the styles related to the static_content controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#top_menu{
+    position: fixed;
+    width: 86%;
+    height: 3em;
+    background-color: pink;
+    left: 7%;
+    top: 0;
+    border-radius: 25px;
+    /* Top menu colors and gradient*/
+    background: -moz-linear-gradient(322deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,0,0,0.85)), color-stop(100%, rgba(130,7,7,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(322deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(322deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(322deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* ie10+ */
+    background: linear-gradient(128deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#820707',GradientType=1 ); /* ie6-9 */
+                  
+    /* Top menu shadows*/
+    -moz-box-shadow: 22px 10px 20px #570d0d;
+    -webkit-box-shadow: 22px 10px 20px #570d0d;
+    box-shadow: 22px 10px 20px #570d0d;
+
+    ul{
+        list-style: none;
+        overflow: hiden;
+    }
+    li{
+        a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+    #right_menu{
+        li{
+            float: right;
+            a{
+                padding-right: 1em;
+            }
+        }
+    }
+
+    #left_menu{
+        margin-left: 1em;
+        li{
+            float: left;
+            a{
+                padding-right: 2em;
+                margin-left: -1em;
+            }
+        }
+    }
+}
+#page_content{
+    margin-top: 4em;
+    margin-left: 10%;
+    padding-bottom: 1em;
+    width: 80%;
+    background-color: lightgrey;
+    border-radius: 25px;
+    word-wrap: break-word;
+    #page_box{
+        padding-top: 1px;
+        padding-left: 1em;
+    }
+}

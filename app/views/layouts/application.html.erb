@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% unless yield(:title).empty? %> 
+        <title>Helldesk2 | <%=yield(:title)%> </title> 
+    <%else %>
+        <title>Helldesk2</title> 
+    <% end %> 
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <%=render 'layouts/top_menu' %>
+
+    <div id="page_content">
+        <div id="page_box">
+            <%= yield %>
+        </div>
+    </div>
+
+</body>
+</html>
