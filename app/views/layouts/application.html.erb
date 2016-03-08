@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <% unless yield(:title).empty? %> 
-        <title>Helldesk2 | <%=yield(:title)%> </title> 
-    <%else %>
-        <title>Helldesk2</title> 
-    <% end %> 
+  <title><%=provide_title(yield(:title))%> </title> 
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
