@@ -1,14 +1,22 @@
 Rails.application.routes.draw do
-  get 'session/new'
 
-  get 'session/create'
+controller :session do
+  get 'login' => :new
+  post 'login' => :create
+  delete 'logout' => :destroy
+end
 
-  get 'session/destroy'
+#get 'session/new'
+
+#post 'session/create'
+
+#delete 'session/delete'
 
   resources :users
 
   controller :static_content do
     get 'start' => :start
+    get 'welcome' => :start
     get 'help' => :help
     get 'about' => :about
   end

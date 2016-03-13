@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validate :password_must_be_present
 
   def User.encrypt_password(password, salt)
-    Digest::SHA2.hexdigest(password + "slowo" + salt) 
+    Digest::SHA2.hexdigest(password + "slowo" + salt)
   end
 
   def password=(password)
@@ -34,5 +34,14 @@ class User < ActiveRecord::Base
 
   def generate_salt
     self.salt = self.object_id.to_s + rand.to_s
+  end
+
+  def testowa_metoda(var1, var2)
+    puts 'To jest testowa metoda'
+    if true
+      puts 'Prawda jest Prawda'
+    else
+      puts 'Prawda jest kłamstwem!!!'
+    end
   end
 end
